@@ -1,5 +1,8 @@
 package utils;
 
+/**
+ * Класс, представляющий матрицу и вектор для системы линейных уравнений.
+ */
 public class Matrix {
     public static double[][] A = {
             {17.7, 0.3, 1.4, 0.9},
