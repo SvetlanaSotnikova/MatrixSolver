@@ -25,7 +25,8 @@ public class GaussSeidel {
         String[] epsilonLabels = {"e10^-3", "e10^-5"};
 
         for (int i = 0; i < epsilons.length; i++) {
-            logger.info("Решение системы уровнений методом Гаусса — Зейделя {}".toUpperCase(), epsilonLabels[i]);
+            logger.info("\n*********************************************");
+            logger.info("\nРешение системы уровнений методом Гаусса — Зейделя {}".toUpperCase(), epsilonLabels[i]);
 
             // Клонируем матрицу и вектор для каждого значения epsilon
             double[][] matrixA = Arrays.stream(Matrix.A).map(double[]::clone).toArray(double[][]::new);
@@ -56,7 +57,7 @@ public class GaussSeidel {
         while (!converged) {
             iteration++;
 
-            logger.info("Iteration: {}", iteration);
+            logger.info("Iteration: {}".toUpperCase(), iteration);
 
             for (int i = 0; i < b.length; i++) {
                 double sum = 0;

@@ -4,7 +4,7 @@
                 <file>logs/my_app.log</file>
                 <immediateFlush>true</immediateFlush>
                 <encoder>
-                        <pattern>%logger{36} - %msg%n</pattern>
+                        <pattern>%msg%n</pattern>
                 </encoder>
         </appender>
 

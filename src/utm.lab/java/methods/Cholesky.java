@@ -18,7 +18,8 @@ public class Cholesky {
      * Печатает решение методом Холецкого.
      */
     public static void printCholesky() {
-        logger.info("Решение методом Холецки".toUpperCase());
+        logger.info("\n*********************************************");
+        logger.info("\nРешение методом Холецки".toUpperCase());
 
         // копируем матрицы в переменные, чтобы не было не явного преобразования
         double[][] A = Arrays.stream(Matrix.A).map(double[]::clone).toArray(double[][]::new);

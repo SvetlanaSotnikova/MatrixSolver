@@ -19,7 +19,8 @@ public class Jacobi {
      * Печатает решение системы линейных уравнений методом Якоби.
      */
     public static void printJacobi() {
-        logger.info("Решение системы уровнений методом Якоби".toUpperCase());
+        logger.info("\n*********************************************");
+        logger.info("\nРешение системы уровнений методом Якоби".toUpperCase());
         double[][] matrixA = Arrays.stream(Matrix.A).map(double[]::clone).toArray(double[][]::new);
         double[] vectorB = Arrays.copyOf(Matrix.b, Matrix.b.length);
         double epsilon = Epsilons.EPSILON_1;
@@ -44,7 +45,7 @@ public class Jacobi {
         while (!converged) {
             iteration++;
 
-            logger.info("Iteration: {}", iteration);
+            logger.info("Iteration: {}".toUpperCase(), iteration);
 
             for (int i = 0; i < b.length; i++) {
                 double sum = 0;
