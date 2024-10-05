@@ -9,10 +9,4 @@ public class Matrix {
     };
 
     public static double[] b = {11.2, -20.3, 14.4, 17.9};
-//    public static double[][] A = {
-//        {4,2,14},
-//        {2,17, -5},
-//        {14,-5,83}
-//    };
-//    public static double[] b = {14,-101,155};
 }
