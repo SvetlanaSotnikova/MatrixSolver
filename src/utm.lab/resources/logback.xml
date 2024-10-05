@@ -1,0 +1,25 @@
+<configuration debug="true">
+        <!-- Appender для записи в файл -->
+        <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+                <file>logs/my_app.log</file>
+                <immediateFlush>true</immediateFlush>
+                <encoder>
+                        <pattern>%logger{36} - %msg%n</pattern>
+                </encoder>
+        </appender>
+
+        <!-- Appender для вывода в консоль -->
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+                <encoder>
+                        <pattern>%logger{36} - %msg%n</pattern>
+                </encoder>
+        </appender>
+
+        <!-- Настройка корневого логгера -->
+        <root level="info">
+                <appender-ref ref="FILE" />
+        </root>
+        <root level="debug">
+                <appender-ref ref="CONSOLE" />
+        </root>
+</configuration>
